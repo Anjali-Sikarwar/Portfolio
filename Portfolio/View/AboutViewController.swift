@@ -16,8 +16,6 @@ class AboutViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.title = "About"
-        navigationItem.backButtonTitle = "Back"
-        
         setupDescriptionView()
     }
         
@@ -70,17 +68,13 @@ class AboutViewController: UIViewController {
     private func updateProfilePhotoCornerRadius() {
         profile_photo.layer.cornerRadius = profile_photo.frame.size.width / 2
         profile_photo.clipsToBounds = true
-        
-        //Adding yellow border
-//        profile_photo.layer.borderWidth = 2.0
-//        profile_photo.layer.borderColor = #colorLiteral(red: 0.9607843161, green: 0.7058823705, blue: 0.200000003, alpha: 1)
-        
+       
         // Create a yellow border with a slight offset
         let yellowBorder = CALayer()
         yellowBorder.frame = profile_photo.bounds
         yellowBorder.cornerRadius = profile_photo.frame.size.width / 2
         yellowBorder.borderWidth = 4.0 // Adjust border width as needed
-        yellowBorder.borderColor = #colorLiteral(red: 0.9466498494, green: 0.5237768888, blue: 0.0302653946, alpha: 1)
+        yellowBorder.borderColor = UIColor.darkYellow.cgColor
         yellowBorder.masksToBounds = true
 
         // Add the yellow border layer to the profile_photo's layer

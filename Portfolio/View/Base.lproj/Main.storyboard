@@ -3,6 +3,7 @@
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -121,13 +122,47 @@
         <scene sceneID="mqv-HP-0y5">
             <objects>
                 <viewController id="Dam-k1-oh8" customClass="SplashViewController" customModule="Portfolio" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Ir7-NY-XgF">
+                    <view key="view" userInteractionEnabled="NO" contentMode="scaleToFill" id="Ir7-NY-XgF">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wTW-Wl-KWy" userLabel="OuterView">
+                                <rect key="frame" x="0.0" y="203" width="393" height="334"/>
+                                <subviews>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Hello, my name is Anjali. I'm an iOS Developer." textAlignment="natural" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="S3n-sP-xB8">
+                                        <rect key="frame" x="30" y="8" width="333" height="318"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="49"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="S3n-sP-xB8" secondAttribute="bottom" constant="8" id="3ZD-pZ-Pmk"/>
+                                    <constraint firstItem="S3n-sP-xB8" firstAttribute="leading" secondItem="wTW-Wl-KWy" secondAttribute="leading" constant="30" id="8LE-kY-Lbl"/>
+                                    <constraint firstItem="S3n-sP-xB8" firstAttribute="top" secondItem="wTW-Wl-KWy" secondAttribute="top" constant="8" id="boq-2i-8RO"/>
+                                    <constraint firstAttribute="trailing" secondItem="S3n-sP-xB8" secondAttribute="trailing" constant="30" id="c7m-Uq-28q"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6pU-LM-9o4"/>
                         <color key="backgroundColor" red="0.043137259779999999" green="0.078431375319999996" blue="0.1215686351" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="wTW-Wl-KWy" firstAttribute="leading" secondItem="6pU-LM-9o4" secondAttribute="leading" id="aRj-b5-dgv"/>
+                            <constraint firstItem="6pU-LM-9o4" firstAttribute="bottom" secondItem="wTW-Wl-KWy" secondAttribute="bottom" constant="281" id="aVy-4K-yvK"/>
+                            <constraint firstItem="wTW-Wl-KWy" firstAttribute="top" secondItem="6pU-LM-9o4" secondAttribute="top" constant="100" id="eOu-FE-nbM"/>
+                            <constraint firstItem="wTW-Wl-KWy" firstAttribute="trailing" secondItem="6pU-LM-9o4" secondAttribute="trailing" id="gtg-Gj-yWM"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="Ovi-cp-V5Z"/>
+                    <navigationItem key="navigationItem" id="Ovi-cp-V5Z">
+                        <barButtonItem key="leftBarButtonItem" title="Item" image="logo_100" style="plain" id="7KT-rs-qIt"/>
+                        <barButtonItem key="rightBarButtonItem" title="Item" id="4hP-MS-Wab">
+                            <imageReference key="image" image="line.horizontal.3" catalog="system" symbolScale="large" variableValue="1"/>
+                            <imageReference key="largeContentSizeImage" image="line.horizontal.3" catalog="system" symbolScale="large"/>
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7EL-vD-rTy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -164,6 +199,10 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="6Dn-eO-oLU">
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="30"/>
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -177,5 +216,7 @@
     </scenes>
     <resources>
         <image name="Me" width="860" height="1244"/>
+        <image name="line.horizontal.3" catalog="system" width="128" height="65"/>
+        <image name="logo_100" width="33.333332061767578" height="33.333332061767578"/>
     </resources>
 </document>
