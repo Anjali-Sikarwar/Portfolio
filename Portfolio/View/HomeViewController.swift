@@ -1,45 +1,80 @@
 //
-//  SplashViewController.swift
+//  MenuViewController.swift
 //  Portfolio
 //
-//  Created by Anjali Sikarwar on 09/02/25.
+//  Created by Anjali Sikarwar on 10/02/25.
 //
 
 import UIKit
 
 class HomeViewController: UIViewController {
+    
+    @IBOutlet weak var menuTableView: UITableView!
+    @IBOutlet weak var containerView: UIView!
+    @IBOutlet weak var backgroundImage: UIImageView!
+    @IBOutlet var swipeGesture: UISwipeGestureRecognizer!
+    
+    var selectedIndex: Int?
+    var menu = false
+    let screen = UIScreen.main.bounds
+    var home = CGAffineTransform()
+    
+    var options: [Option] = [
+        Option(title: "Home", segue: "HomeSegue"),
+        Option(title: "About", segue: "AboutSegue")
+    ]
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupBackground()
-    }
-    
-    private func setupBackground() {
+        menuTableView.delegate = self
+        menuTableView.dataSource = self
+        menuTableView.backgroundColor = .clear
+        home = containerView.transform
         //Loding logo image
         guard let logoImage = UIImage(named: "logo_100")?.withRenderingMode(.alwaysOriginal)else {
             print("Error loading logo image")
             return
         }
         navigationItem.leftBarButtonItem = UIBarButtonItem(image: logoImage, style: .plain, target: self, action: nil)
-        
-        //Outer Arc
-        let arcCenter = CGPoint(x: view.frame.width * 1, y: view.frame.height * 0.9) // Adjust center as needed
-        let outerArcPath = UIBezierPath()
-        outerArcPath.addArc(withCenter: arcCenter, radius: view.frame.width * 0.6, startAngle: CGFloat.pi * 2, endAngle: CGFloat.pi * 1.7, clockwise: true)
-        let outerArcLayer = CAShapeLayer()
-        outerArcLayer.path = outerArcPath.cgPath
-        outerArcLayer.strokeColor = UIColor.darkYellow.cgColor
-        outerArcLayer.lineWidth = 40 // Adjust stroke width as needed
-        view.layer.addSublayer(outerArcLayer)
-        
-        //Inner Arc
-        let innerArcPath = UIBezierPath()
-        innerArcPath.addArc(withCenter: arcCenter, radius: view.frame.width * 0.4, startAngle: CGFloat.pi * 2, endAngle: CGFloat.pi * 1.6, clockwise: true)
-        let innerArcLayer = CAShapeLayer()
-        innerArcLayer.path = innerArcPath.cgPath
-        innerArcLayer.strokeColor = UIColor.darkRed.cgColor
-        innerArcLayer.lineWidth = 38 // Adjust stroke width as needed
-        view.layer.addSublayer(innerArcLayer)
     }
-
+    
+    @IBAction func menuButtonClicked(_ sender: Any) {
+        if menu == false && swipeGesture.direction == .right {
+            showMenu()
+            menu = true
+        }
+    }
+    func showMenu() {
+        self.selectedIndex = nil
+        self.menuTableView.reloadData()
+        self.containerView.layer.cornerRadius = 40
+        self.backgroundImage.layer.cornerRadius = self.containerView.layer.cornerRadius
+        let x = screen.width * 0.5 //0.8
+        let originalTransform = self.containerView.transform
+        let scaledTransform = originalTransform.scaledBy(x: 0.8, y: 0.8)
+        let scaledAndTranslatedTransform = scaledTransform.translatedBy(x: x, y: 0)
+        UIView.animate(withDuration: 0.7){
+            self.containerView.transform = scaledAndTranslatedTransform
+            self.navigationBarSetup(isUserInteractionEnable: false)
+        }
+    }
+    
+    func hideMenu() {
+        UIView.animate(withDuration: 0.7) {
+        self.containerView.transform = self.home
+        self.containerView.layer.cornerRadius = 0
+        self.containerView.layer.cornerRadius = self.containerView.layer.cornerRadius
+            self.navigationBarSetup(isUserInteractionEnable: true)
+            self.view.bringSubviewToFront(self.containerView) 
+        }
+        
+    }
+    
+    @IBAction func hideMenuByTapGesture(_ sender: UITapGestureRecognizer) {
+        if menu {
+            hideMenu()
+            menu = false
+        }
+    }
+    
 }

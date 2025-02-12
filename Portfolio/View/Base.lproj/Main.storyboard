@@ -46,10 +46,10 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZUK-wI-JS7" userLabel="Description_base_view">
-                                <rect key="frame" x="0.0" y="423" width="393" height="395"/>
+                                <rect key="frame" x="0.0" y="379" width="393" height="439"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MTY-Rc-JjW" userLabel="description_design_view">
-                                        <rect key="frame" x="8" y="8" width="377" height="379"/>
+                                        <rect key="frame" x="8" y="8" width="377" height="423"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pyw-jG-wOX">
                                                 <rect key="frame" x="29" y="29" width="320" height="93"/>
@@ -117,7 +117,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="218" y="418"/>
+            <point key="canvasLocation" x="282" y="444"/>
         </scene>
         <!--Home View Controller-->
         <scene sceneID="mqv-HP-0y5">
@@ -169,10 +169,10 @@
             </objects>
             <point key="canvasLocation" x="218" y="-260"/>
         </scene>
-        <!--Menu View Controller-->
+        <!--Home View Controller-->
         <scene sceneID="WGy-e1-mlm">
             <objects>
-                <viewController id="280-ON-Wdo" customClass="MenuViewController" customModule="Portfolio" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="280-ON-Wdo" customClass="HomeViewController" customModule="Portfolio" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="QNd-jf-mMk">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -181,7 +181,7 @@
                                 <rect key="frame" x="16" y="203" width="240" height="615"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MenuTableViewCell" id="Kww-O6-ZpG" customClass="MenuTableViewCell" customModule="Portfolio" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="MenuTableViewCell" id="Kww-O6-ZpG" customClass="MenuTableViewCell" customModule="Portfolio" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="50" width="240" height="50.333332061767578"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Kww-O6-ZpG" id="E8g-Gd-bBK">
@@ -193,7 +193,7 @@
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="50" id="Ypk-gx-ry6"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -214,11 +214,14 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="39f-Gx-Y4y">
                                 <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                                 <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="kOO-P2-QQL">
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                                    </imageView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LkR-mi-H0A" userLabel="OuterView">
-                                        <rect key="frame" x="0.0" y="100" width="393" height="471"/>
+                                        <rect key="frame" x="0.0" y="150" width="393" height="421"/>
                                         <subviews>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="Hello, my name is Anjali. I'm an iOS Developer." textAlignment="natural" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="j1X-CI-OUg">
-                                                <rect key="frame" x="30" y="8" width="333" height="455"/>
+                                                <rect key="frame" x="30" y="8" width="333" height="405"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="49"/>
@@ -237,10 +240,14 @@
                                 <color key="backgroundColor" red="0.043137259779999999" green="0.078431375319999996" blue="0.1215686351" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <gestureRecognizers/>
                                 <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="kOO-P2-QQL" secondAttribute="trailing" id="1Vg-jy-of1"/>
                                     <constraint firstItem="LkR-mi-H0A" firstAttribute="leading" secondItem="39f-Gx-Y4y" secondAttribute="leading" id="At0-Ts-THf"/>
+                                    <constraint firstItem="kOO-P2-QQL" firstAttribute="leading" secondItem="39f-Gx-Y4y" secondAttribute="leading" id="KVZ-Q6-jPr"/>
+                                    <constraint firstItem="kOO-P2-QQL" firstAttribute="top" secondItem="39f-Gx-Y4y" secondAttribute="top" id="WME-4S-Yr9"/>
+                                    <constraint firstAttribute="bottom" secondItem="kOO-P2-QQL" secondAttribute="bottom" id="ZWr-Sy-LO1"/>
                                     <constraint firstAttribute="bottom" secondItem="LkR-mi-H0A" secondAttribute="bottom" constant="281" id="Zya-YN-tDb"/>
                                     <constraint firstAttribute="trailing" secondItem="LkR-mi-H0A" secondAttribute="trailing" id="gQl-7Y-mw9"/>
-                                    <constraint firstItem="LkR-mi-H0A" firstAttribute="top" secondItem="39f-Gx-Y4y" secondAttribute="top" constant="100" id="zr5-xp-zWl"/>
+                                    <constraint firstItem="LkR-mi-H0A" firstAttribute="top" secondItem="39f-Gx-Y4y" secondAttribute="top" constant="150" id="zr5-xp-zWl"/>
                                 </constraints>
                                 <connections>
                                     <outletCollection property="gestureRecognizers" destination="rvF-XZ-mcP" appends="YES" id="zRM-rY-jUs"/>
@@ -261,26 +268,31 @@
                             <constraint firstItem="39f-Gx-Y4y" firstAttribute="top" secondItem="QNd-jf-mMk" secondAttribute="top" id="xDj-9K-fcQ"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="w5I-Gl-SuN"/>
+                    <navigationItem key="navigationItem" id="w5I-Gl-SuN">
+                        <barButtonItem key="leftBarButtonItem" title="Item" image="logo_100" id="t4a-iC-Agk"/>
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="line.horizontal.3" catalog="system" id="4aI-8c-S5I">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="menuButtonClicked:" destination="280-ON-Wdo" id="BJa-Cl-Vp9"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
+                        <outlet property="backgroundImage" destination="kOO-P2-QQL" id="Pz3-MF-5zq"/>
                         <outlet property="containerView" destination="39f-Gx-Y4y" id="Q4G-4i-4zB"/>
-                        <outlet property="menuTableView" destination="ZOK-fE-3C6" id="iwo-LZ-KT0"/>
+                        <outlet property="menuTableView" destination="ZOK-fE-3C6" id="UXw-Ao-Cof"/>
                         <outlet property="swipeGesture" destination="rvF-XZ-mcP" id="mAb-Vh-Oxr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="F49-In-Zm1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <swipeGestureRecognizer direction="right" id="rvF-XZ-mcP">
-                    <connections>
-                        <action selector="showMenuBySwipeGesture:" destination="280-ON-Wdo" id="Wic-qd-fmh"/>
-                    </connections>
-                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="right" id="rvF-XZ-mcP"/>
                 <tapGestureRecognizer id="WID-kf-mOf">
                     <connections>
                         <action selector="hideMenuByTapGesture:" destination="280-ON-Wdo" id="mcA-Fr-Kjl"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="-764" y="56"/>
+            <point key="canvasLocation" x="-708" y="56"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="sbb-Y5-G16">
@@ -290,12 +302,20 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="YqM-ht-yc2">
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="30"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="35"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
                         <segue destination="280-ON-Wdo" kind="relationship" relationship="rootViewController" id="Bve-Tj-tEU"/>
                         <segue destination="Dam-k1-oh8" kind="show" identifier="HomeSegue" id="BYS-tc-euy"/>
-                        <segue destination="BYZ-38-t0r" kind="show" identifier="AboutSegue" id="kL0-r1-mGN"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="AboutSegue" id="myX-wa-SKt"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zbC-70-Szr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -305,6 +325,7 @@
     </scenes>
     <resources>
         <image name="Me" width="860" height="1244"/>
+        <image name="background" width="393" height="792.33331298828125"/>
         <image name="line.horizontal.3" catalog="system" width="128" height="65"/>
         <image name="logo_100" width="33.333332061767578" height="33.333332061767578"/>
         <systemColor name="systemBackgroundColor">

@@ -8,10 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		86354B182D58E1C200EFDAEF /* ColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86354B172D58E1C200EFDAEF /* ColorExtensions.swift */; };
-		86354B1A2D5A631400EFDAEF /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86354B192D5A631400EFDAEF /* MenuViewController.swift */; };
+		86354B1A2D5A631400EFDAEF /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86354B192D5A631400EFDAEF /* HomeViewController.swift */; };
 		86354B1C2D5A652B00EFDAEF /* Options.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86354B1B2D5A652B00EFDAEF /* Options.swift */; };
 		86354B1E2D5A793800EFDAEF /* MenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86354B1D2D5A793800EFDAEF /* MenuTableViewCell.swift */; };
-		86354B202D5A7FA200EFDAEF /* MenuViewController+UITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86354B1F2D5A7FA200EFDAEF /* MenuViewController+UITableView.swift */; };
+		86354B202D5A7FA200EFDAEF /* HomeViewController+MenuTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86354B1F2D5A7FA200EFDAEF /* HomeViewController+MenuTableView.swift */; };
 		8697E13B2D53C5CB008A31F7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8697E13A2D53C5CB008A31F7 /* AppDelegate.swift */; };
 		8697E13D2D53C5CB008A31F7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8697E13C2D53C5CB008A31F7 /* SceneDelegate.swift */; };
 		8697E13F2D53C5CB008A31F7 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8697E13E2D53C5CB008A31F7 /* AboutViewController.swift */; };
@@ -19,15 +19,15 @@
 		8697E1452D53C5CB008A31F7 /* Portfolio.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8697E1432D53C5CB008A31F7 /* Portfolio.xcdatamodeld */; };
 		8697E1472D53C5CE008A31F7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8697E1462D53C5CE008A31F7 /* Assets.xcassets */; };
 		8697E14A2D53C5CE008A31F7 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 8697E1492D53C5CE008A31F7 /* Base */; };
-		86B4E2B02D58AF860012DBF0 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86B4E2AF2D58AF860012DBF0 /* HomeViewController.swift */; };
+		86FA5B2D2D5D3E54004FF4A8 /* HelperFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86FA5B2C2D5D3E54004FF4A8 /* HelperFunction.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		86354B172D58E1C200EFDAEF /* ColorExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtensions.swift; sourceTree = "<group>"; };
-		86354B192D5A631400EFDAEF /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		86354B192D5A631400EFDAEF /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		86354B1B2D5A652B00EFDAEF /* Options.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Options.swift; sourceTree = "<group>"; };
 		86354B1D2D5A793800EFDAEF /* MenuTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTableViewCell.swift; sourceTree = "<group>"; };
-		86354B1F2D5A7FA200EFDAEF /* MenuViewController+UITableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MenuViewController+UITableView.swift"; sourceTree = "<group>"; };
+		86354B1F2D5A7FA200EFDAEF /* HomeViewController+MenuTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeViewController+MenuTableView.swift"; sourceTree = "<group>"; };
 		8697E1372D53C5CB008A31F7 /* Portfolio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Portfolio.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8697E13A2D53C5CB008A31F7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8697E13C2D53C5CB008A31F7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -37,7 +37,7 @@
 		8697E1462D53C5CE008A31F7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8697E1492D53C5CE008A31F7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8697E14B2D53C5CE008A31F7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		86B4E2AF2D58AF860012DBF0 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		86FA5B2C2D5D3E54004FF4A8 /* HelperFunction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelperFunction.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +55,7 @@
 			isa = PBXGroup;
 			children = (
 				86354B172D58E1C200EFDAEF /* ColorExtensions.swift */,
+				86FA5B2C2D5D3E54004FF4A8 /* HelperFunction.swift */,
 			);
 			path = "Utilities ";
 			sourceTree = "<group>";
@@ -104,11 +105,10 @@
 			isa = PBXGroup;
 			children = (
 				8697E13E2D53C5CB008A31F7 /* AboutViewController.swift */,
-				86B4E2AF2D58AF860012DBF0 /* HomeViewController.swift */,
 				8697E1402D53C5CB008A31F7 /* Main.storyboard */,
-				86354B192D5A631400EFDAEF /* MenuViewController.swift */,
+				86354B192D5A631400EFDAEF /* HomeViewController.swift */,
 				86354B1D2D5A793800EFDAEF /* MenuTableViewCell.swift */,
-				86354B1F2D5A7FA200EFDAEF /* MenuViewController+UITableView.swift */,
+				86354B1F2D5A7FA200EFDAEF /* HomeViewController+MenuTableView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -194,13 +194,13 @@
 				8697E1452D53C5CB008A31F7 /* Portfolio.xcdatamodeld in Sources */,
 				8697E13F2D53C5CB008A31F7 /* AboutViewController.swift in Sources */,
 				8697E13B2D53C5CB008A31F7 /* AppDelegate.swift in Sources */,
-				86354B1A2D5A631400EFDAEF /* MenuViewController.swift in Sources */,
+				86354B1A2D5A631400EFDAEF /* HomeViewController.swift in Sources */,
 				86354B1C2D5A652B00EFDAEF /* Options.swift in Sources */,
 				86354B1E2D5A793800EFDAEF /* MenuTableViewCell.swift in Sources */,
 				8697E13D2D53C5CB008A31F7 /* SceneDelegate.swift in Sources */,
-				86B4E2B02D58AF860012DBF0 /* HomeViewController.swift in Sources */,
+				86FA5B2D2D5D3E54004FF4A8 /* HelperFunction.swift in Sources */,
 				86354B182D58E1C200EFDAEF /* ColorExtensions.swift in Sources */,
-				86354B202D5A7FA200EFDAEF /* MenuViewController+UITableView.swift in Sources */,
+				86354B202D5A7FA200EFDAEF /* HomeViewController+MenuTableView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

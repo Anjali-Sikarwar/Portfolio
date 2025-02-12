@@ -10,5 +10,4 @@ import Foundation
 struct Option {
     var title : String = ""
     var segue : String = ""
-//    var isSelected : Bool = false
 }

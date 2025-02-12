@@ -15,7 +15,9 @@ class AboutViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationController?.navigationBar.isHidden = false
         navigationItem.title = "About"
+        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Back", style: .plain, target: self, action: #selector(backButtonPressed))
         setupDescriptionView()
     }
         
@@ -25,17 +27,31 @@ class AboutViewController: UIViewController {
         updateDescriptionViewMask()
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-            super.viewDidAppear(animated)
-
-        // Animate the description_design_view with a spring animation
-        UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 0.8, initialSpringVelocity: 0, options: [], animations: {
-            self.description_design_view.transform = CGAffineTransform(scaleX: 0.0, y: 0.0)
-        }) { _ in
-            UIView.animate(withDuration: 0.8, delay: 0, usingSpringWithDamping: 0.8, initialSpringVelocity: 0, options: [], animations: {
-                self.description_design_view.transform = .identity // Reset to original size
-            })
+    @objc func backButtonPressed() {
+        guard let navigationController = navigationController else { return }
+               // Pop all view controllers on the stack until you reach the HomeViewController
+        for viewController in navigationController.viewControllers {
+           if let homeViewController = viewController as? HomeViewController {
+               homeViewController.hideMenu() // Call hideMenu() on the HomeViewController instance
+               homeViewController.menu = false
+//                       navigationController.popViewController(animated: true)
+               navigationController.popToViewController(homeViewController, animated: true)
+               return
+           }
         }
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+
+//        // Animate the description_design_view with a spring animation
+//        UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 0.8, initialSpringVelocity: 0, options: [], animations: {
+//            self.description_design_view.transform = CGAffineTransform(scaleX: 0.0, y: 0.0)
+//        }) { _ in
+//            UIView.animate(withDuration: 0.8, delay: 0, usingSpringWithDamping: 0.8, initialSpringVelocity: 0, options: [], animations: {
+//                self.description_design_view.transform = .identity // Reset to original size
+//            })
+//        }
     }
     
     private func setupDescriptionView() {
@@ -53,6 +69,15 @@ class AboutViewController: UIViewController {
         gradientLayer.startPoint = CGPoint(x: 0, y: 0.5) // Top-Left
         gradientLayer.endPoint = CGPoint(x: 1, y: 0.5) // Bottom-Right
         description_design_view.layer.insertSublayer(gradientLayer, at: 0)
+        
+        // Animate the description_design_view with a spring animation
+        UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 0.8, initialSpringVelocity: 0, options: [], animations: {
+            self.description_design_view.transform = CGAffineTransform(scaleX: 0.0, y: 0.0)
+        }) { _ in
+            UIView.animate(withDuration: 0.8, delay: 0, usingSpringWithDamping: 0.8, initialSpringVelocity: 0, options: [], animations: {
+                self.description_design_view.transform = .identity // Reset to original size
+            })
+        }
 
     }
     
