@@ -11,7 +11,7 @@ class MenuViewController: UIViewController {
     
     @IBOutlet weak var menuTableView: UITableView!
     @IBOutlet weak var containerView: UIView!
-    @IBOutlet weak var backgroundImage: UIImageView!
+//    @IBOutlet weak var backgroundImage: UIImageView!
     @IBOutlet var swipeGesture: UISwipeGestureRecognizer!
     
     var menu = false
@@ -33,8 +33,7 @@ class MenuViewController: UIViewController {
     
     func showMenu() {
         self.containerView.layer.cornerRadius = 40
-        self.backgroundImage.layer.cornerRadius =
-        self.containerView.layer.cornerRadius
+//        self.backgroundImage.layer.cornerRadius = self.containerView.layer.cornerRadius
         let x = screen.width * 0.5 //0.8
         let originalTransform = self.containerView.transform
         let scaledTransform = originalTransform.scaledBy(x: 0.8, y: 0.8)
