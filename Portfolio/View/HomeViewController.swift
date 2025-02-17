@@ -44,6 +44,7 @@ class HomeViewController: UIViewController {
             menu = true
         }
     }
+    
     func showMenu() {
         self.selectedIndex = nil
         self.menuTableView.reloadData()
@@ -67,7 +68,6 @@ class HomeViewController: UIViewController {
             self.navigationBarSetup(isUserInteractionEnable: true)
             self.view.bringSubviewToFront(self.containerView) 
         }
-        
     }
     
     @IBAction func hideMenuByTapGesture(_ sender: UITapGestureRecognizer) {

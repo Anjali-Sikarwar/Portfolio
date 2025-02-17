@@ -10,7 +10,7 @@ import UIKit
 
 extension UIViewController {
     func navigationBarSetup(isUserInteractionEnable: Bool) {
-        self.navigationController?.navigationBar.layer.opacity = 1
+        self.navigationController?.navigationBar.layer.opacity = isUserInteractionEnable ? 1 : 0
         self.navigationController?.navigationBar.isUserInteractionEnabled = isUserInteractionEnable
     }
 }
