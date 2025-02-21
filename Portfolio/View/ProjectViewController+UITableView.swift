@@ -18,16 +18,18 @@ extension ProjectViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ProjectTableViewCell", for: indexPath) as! ProjectTableViewCell
-        cell.backgroundColor = .cyan
-        if let imageUrlString = projects[indexPath.row].image, let imageUrl = URL(string: imageUrlString) {
-            cell.imageView?.kf.setImage(with: imageUrl, placeholder: UIImage(named: "placeholder"))
+        
+        let project = projects[indexPath.row]
+
+        cell.projectName.text = project.name
+        cell.technologieName.text = project.technologies.joined(separator: ", ")
+        cell.roleLabel.text = project.role
+
+        if let imageUrlString = project.imageUrl, let imageUrl = URL(string: imageUrlString) {
+            cell.projectImageView.kf.setImage(with: imageUrl, placeholder: UIImage(named: "placeholder"))
         } else {
             cell.projectImageView.image = UIImage(named: "placeholder")
         }
-        
-        cell.projectName.text = projects[indexPath.row].name
-        cell.technologieName.text = projects[indexPath.row].technologies.joined(separator: ", ")
-        cell.roleLabel.text = projects[indexPath.row].role
         return cell
     }
     

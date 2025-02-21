@@ -12,6 +12,8 @@
 		86354B1C2D5A652B00EFDAEF /* Option.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86354B1B2D5A652B00EFDAEF /* Option.swift */; };
 		86354B1E2D5A793800EFDAEF /* MenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86354B1D2D5A793800EFDAEF /* MenuTableViewCell.swift */; };
 		86354B202D5A7FA200EFDAEF /* HomeViewController+MenuTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86354B1F2D5A7FA200EFDAEF /* HomeViewController+MenuTableView.swift */; };
+		868662C02D68E3F5003A90F9 /* CellDesignView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 868662BF2D68E3F5003A90F9 /* CellDesignView.swift */; };
+		868662C22D68F8BE003A90F9 /* TestTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 868662C12D68F8BE003A90F9 /* TestTableViewCell.swift */; };
 		8697E13B2D53C5CB008A31F7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8697E13A2D53C5CB008A31F7 /* AppDelegate.swift */; };
 		8697E13D2D53C5CB008A31F7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8697E13C2D53C5CB008A31F7 /* SceneDelegate.swift */; };
 		8697E13F2D53C5CB008A31F7 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8697E13E2D53C5CB008A31F7 /* AboutViewController.swift */; };
@@ -36,6 +38,8 @@
 		86354B1B2D5A652B00EFDAEF /* Option.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Option.swift; sourceTree = "<group>"; };
 		86354B1D2D5A793800EFDAEF /* MenuTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTableViewCell.swift; sourceTree = "<group>"; };
 		86354B1F2D5A7FA200EFDAEF /* HomeViewController+MenuTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeViewController+MenuTableView.swift"; sourceTree = "<group>"; };
+		868662BF2D68E3F5003A90F9 /* CellDesignView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellDesignView.swift; sourceTree = "<group>"; };
+		868662C12D68F8BE003A90F9 /* TestTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestTableViewCell.swift; sourceTree = "<group>"; };
 		8697E1372D53C5CB008A31F7 /* Portfolio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Portfolio.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8697E13A2D53C5CB008A31F7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8697E13C2D53C5CB008A31F7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -154,6 +158,8 @@
 				86354B1D2D5A793800EFDAEF /* MenuTableViewCell.swift */,
 				86E6DDFA2D5DDE270070C9B0 /* ProjectTableViewCell.xib */,
 				86E6DDFC2D5DDE400070C9B0 /* ProjectTableViewCell.swift */,
+				868662BF2D68E3F5003A90F9 /* CellDesignView.swift */,
+				868662C12D68F8BE003A90F9 /* TestTableViewCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -164,7 +170,6 @@
 				452B9A2278EABA27015829A9 /* Pods-Portfolio.debug.xcconfig */,
 				1B742CFEF54F1F58A148533C /* Pods-Portfolio.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -289,7 +294,9 @@
 				8697E1452D53C5CB008A31F7 /* Portfolio.xcdatamodeld in Sources */,
 				86E6DDF42D5DC6000070C9B0 /* ProjectViewController.swift in Sources */,
 				8697E13F2D53C5CB008A31F7 /* AboutViewController.swift in Sources */,
+				868662C22D68F8BE003A90F9 /* TestTableViewCell.swift in Sources */,
 				8697E13B2D53C5CB008A31F7 /* AppDelegate.swift in Sources */,
+				868662C02D68E3F5003A90F9 /* CellDesignView.swift in Sources */,
 				86E6DDF82D5DD0C10070C9B0 /* Project.swift in Sources */,
 				86354B1A2D5A631400EFDAEF /* HomeViewController.swift in Sources */,
 				86354B1C2D5A652B00EFDAEF /* Option.swift in Sources */,
@@ -451,6 +458,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = DQXV2AHZWT;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Portfolio/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -480,6 +488,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = DQXV2AHZWT;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Portfolio/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
