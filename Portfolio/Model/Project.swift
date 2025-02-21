@@ -11,6 +11,6 @@ struct Project {
     let name: String
     let description: String
     let technologies: [String]
-    let image: String? // Optional - Store image URL or local file path
+    let imageUrl: String? // Optional - Store image URL or local file path
     let role: String? // Optional
 }
