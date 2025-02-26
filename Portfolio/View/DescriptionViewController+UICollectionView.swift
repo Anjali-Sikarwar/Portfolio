@@ -18,6 +18,9 @@ extension DescriptionViewController: UICollectionViewDelegate, UICollectionViewD
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "projectScreenshotCollectionViewCell", for: indexPath) as! projectScreenshotCollectionViewCell
         cell.screenshotImageView.layer.borderWidth = 1
         cell.screenshotImageView.layer.borderColor = UIColor.black.cgColor
+        cell.screenshotImageView.layer.cornerRadius = 10
+//        cell.layer.cornerRadius = 10
+        
         cell.screenshotImageView.image = projectScreenshotArray[indexPath.row]
         return cell
     }

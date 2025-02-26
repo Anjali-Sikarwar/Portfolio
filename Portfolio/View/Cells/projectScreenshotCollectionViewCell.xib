@@ -9,32 +9,45 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="projectScreenshotCollectionViewCell" id="0Z6-yS-0fl" customClass="projectScreenshotCollectionViewCell" customModule="Portfolio" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="399" height="115"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="projectScreenshotCollectionViewCell" id="rXA-h1-WJn" customClass="projectScreenshotCollectionViewCell" customModule="Portfolio" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="435" height="257"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-            <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" insetsLayoutMarginsFromSafeArea="NO" id="FSo-9Z-Pw9">
-                <rect key="frame" x="0.0" y="0.0" width="399" height="115"/>
+            <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" insetsLayoutMarginsFromSafeArea="NO" id="C1F-vh-Wtx">
+                <rect key="frame" x="0.0" y="0.0" width="435" height="257"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="WfY-r0-EXE" customClass="projec">
-                        <rect key="frame" x="5" y="5" width="389" height="100"/>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MBP-iC-AVP">
+                        <rect key="frame" x="5" y="5" width="150" height="250"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="v4o-nf-ai0">
+                                <rect key="frame" x="0.0" y="0.0" width="150" height="250"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.043137259779999999" green="0.078431375319999996" blue="0.1215686351" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="100" id="fR8-Eh-E8a"/>
+                            <constraint firstItem="v4o-nf-ai0" firstAttribute="leading" secondItem="MBP-iC-AVP" secondAttribute="leading" id="0cL-YX-tfn"/>
+                            <constraint firstAttribute="bottom" secondItem="v4o-nf-ai0" secondAttribute="bottom" id="AwT-HL-W2S"/>
+                            <constraint firstAttribute="trailing" secondItem="v4o-nf-ai0" secondAttribute="trailing" id="dfv-xN-4lm"/>
+                            <constraint firstItem="v4o-nf-ai0" firstAttribute="top" secondItem="MBP-iC-AVP" secondAttribute="top" id="eVL-2K-9QQ"/>
+                            <constraint firstAttribute="width" constant="150" id="tJl-K1-Ag0"/>
+                            <constraint firstAttribute="height" constant="250" id="tax-3b-ijr"/>
                         </constraints>
-                    </imageView>
+                    </view>
                 </subviews>
                 <constraints>
-                    <constraint firstAttribute="bottom" secondItem="WfY-r0-EXE" secondAttribute="bottom" constant="5" id="JCn-uf-Q90"/>
-                    <constraint firstAttribute="trailing" secondItem="WfY-r0-EXE" secondAttribute="trailing" constant="5" id="Wa6-AS-k4g"/>
-                    <constraint firstItem="WfY-r0-EXE" firstAttribute="leading" secondItem="FSo-9Z-Pw9" secondAttribute="leading" constant="5" id="eLh-F3-XwB"/>
-                    <constraint firstItem="WfY-r0-EXE" firstAttribute="top" secondItem="FSo-9Z-Pw9" secondAttribute="top" constant="5" id="woS-ds-T21"/>
+                    <constraint firstItem="MBP-iC-AVP" firstAttribute="leading" secondItem="C1F-vh-Wtx" secondAttribute="leading" constant="5" id="1Xq-Sy-1w7"/>
+                    <constraint firstAttribute="bottom" secondItem="MBP-iC-AVP" secondAttribute="bottom" constant="5" id="4Ti-pF-vBo"/>
+                    <constraint firstItem="MBP-iC-AVP" firstAttribute="top" secondItem="C1F-vh-Wtx" secondAttribute="top" constant="5" id="IQG-tH-5qJ"/>
+                    <constraint firstAttribute="trailing" secondItem="MBP-iC-AVP" secondAttribute="trailing" constant="5" id="ejq-L2-Xpd"/>
                 </constraints>
             </collectionViewCellContentView>
-            <size key="customSize" width="399" height="115"/>
+            <color key="backgroundColor" red="0.043137259779999999" green="0.078431375319999996" blue="0.1215686351" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <size key="customSize" width="435" height="257"/>
             <connections>
-                <outlet property="screenshotImageView" destination="WfY-r0-EXE" id="rg0-gE-t7P"/>
+                <outlet property="screenshotImageView" destination="v4o-nf-ai0" id="oFb-Wx-327"/>
             </connections>
-            <point key="canvasLocation" x="209.92366412213741" y="-52.464788732394368"/>
+            <point key="canvasLocation" x="319.84732824427482" y="157.3943661971831"/>
         </collectionViewCell>
     </objects>
 </document>

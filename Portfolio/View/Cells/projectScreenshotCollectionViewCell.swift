@@ -9,4 +9,9 @@ import UIKit
 
 class projectScreenshotCollectionViewCell: UICollectionViewCell {
     
+    @IBOutlet weak var screenshotImageView: UIImageView!
+    
+    override class func awakeFromNib() {
+    
+    }
 }
