@@ -9,7 +9,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="projectScreenshotCollectionViewCell" id="rXA-h1-WJn" customClass="projectScreenshotCollectionViewCell" customModule="Portfolio" customModuleProvider="target">
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ShowcaseScreenshotCollectionViewCell" id="rXA-h1-WJn" customClass="ShowcaseScreenshotCollectionViewCell" customModule="Portfolio" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="435" height="257"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" insetsLayoutMarginsFromSafeArea="NO" id="C1F-vh-Wtx">
@@ -45,7 +45,7 @@
             <color key="backgroundColor" red="0.043137259779999999" green="0.078431375319999996" blue="0.1215686351" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
             <size key="customSize" width="435" height="257"/>
             <connections>
-                <outlet property="screenshotImageView" destination="v4o-nf-ai0" id="oFb-Wx-327"/>
+                <outlet property="projectScreenshotImageView" destination="v4o-nf-ai0" id="QH0-r9-cAP"/>
             </connections>
             <point key="canvasLocation" x="319.84732824427482" y="157.3943661971831"/>
         </collectionViewCell>

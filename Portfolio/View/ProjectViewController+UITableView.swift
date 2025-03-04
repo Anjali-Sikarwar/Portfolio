@@ -21,25 +21,35 @@ extension ProjectViewController: UITableViewDelegate, UITableViewDataSource {
         
         let project = projects[indexPath.row]
 
-        cell.projectName.text = project.name
+        cell.projectName.text = project.projectName
         cell.technologieName.text = project.technologies.joined(separator: ", ")
         cell.roleLabel.text = project.role
 
-        if let imageUrlString = project.imageUrl, let imageUrl = URL(string: imageUrlString) {
+        if let imageUrlString = project.projectImageUrl, let imageUrl = URL(string: imageUrlString) {
             cell.projectImageView.kf.setImage(with: imageUrl, placeholder: UIImage(named: "placeholder"))
         } else {
             cell.projectImageView.image = UIImage(named: "placeholder")
         }
+        cell.selectionStyle = .none
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print("Hello")
-        tableView.reloadData()
+        tableView.deselectRow(at: indexPath, animated: true)
+        let selectedProject = projects[indexPath.row]
+        performSegue(withIdentifier: "descriptionSegue", sender: selectedProject)//descriptionSegue
+//        tableView.reloadData()
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 130
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "descriptionSegue", let descriptionVC = segue.destination as? DescriptionViewController, let selectedProject = sender as? Project {
+            descriptionVC.project = selectedProject
+        }
     }
     
 }

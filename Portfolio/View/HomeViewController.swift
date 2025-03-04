@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SafariServices
 
 class HomeViewController: UIViewController {
     
@@ -14,6 +15,8 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var backgroundImage: UIImageView!
     @IBOutlet var swipeGesture: UISwipeGestureRecognizer!
     
+    @IBOutlet weak var linkedIn_profile_button: UIButton!
+    @IBOutlet weak var github_profile_button: UIButton!
     var selectedIndex: Int?
     var menu = false
     let screen = UIScreen.main.bounds
@@ -21,7 +24,8 @@ class HomeViewController: UIViewController {
     
     var options: [Option] = [
         Option(title: "Home", segue: "HomeSegue"),
-        Option(title: "About", segue: "AboutSegue")
+        Option(title: "About", segue: "AboutSegue"),
+        Option(title: "Projects", segue: "ProjectSegue")
     ]
 
     override func viewDidLoad() {
@@ -43,6 +47,17 @@ class HomeViewController: UIViewController {
             showMenu()
             menu = true
         }
+    }
+    
+    @IBAction func githubProfileButtonPressed(_ sender: Any) {
+
+        let safariVC = SFSafariViewController(url: URL(string: "https://github.com/Anjali-Sikarwar")!)
+        present(safariVC, animated: true, completion: nil)
+    }
+    
+    @IBAction func linkedInButtonPressed(_ sender: Any) {
+        let safariVC = SFSafariViewController(url: URL(string: "https://www.linkedin.com/in/anjali-sikarwar-7b266a217/")!)
+        present(safariVC, animated: true, completion: nil)
     }
     
     func showMenu() {

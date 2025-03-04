@@ -6,11 +6,14 @@
 //
 
 import Foundation
+import UIKit
 
 struct Project {
-    let name: String
-    let description: String
+    let projectName: String
+    let projectDescription: String
     let technologies: [String]
-    let imageUrl: String? // Optional - Store image URL or local file path
+    let projectImageUrl: String? // Optional - Store image URL or local file path
+    let projectShowcaseScreenshots: [UIImage]
+    let gitHubLink: String
     let role: String? // Optional
 }

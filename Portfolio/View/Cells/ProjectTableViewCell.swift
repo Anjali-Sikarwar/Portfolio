@@ -20,7 +20,6 @@ class ProjectTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        
         baseView.layer.borderColor = UIColor.darkGray.cgColor
         baseView.layer.cornerRadius = 8
 
