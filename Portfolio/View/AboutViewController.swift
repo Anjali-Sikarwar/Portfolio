@@ -30,28 +30,14 @@ class AboutViewController: UIViewController {
     }
     
     @objc func backButtonPressed() {
-        guard let navigationController = navigationController else { return }
-               // Pop all view controllers on the stack until you reach the HomeViewController
-        for viewController in navigationController.viewControllers {
-           if let homeViewController = viewController as? HomeViewController {
-               homeViewController.hideMenu() // Call hideMenu() on the HomeViewController instance
-               homeViewController.menu = false
-//                       navigationController.popViewController(animated: true)
-               navigationController.popToViewController(homeViewController, animated: true)
-               return
-           }
-        }
+        homePageNavigation()
     }
     
     private func setupDescriptionView() {
-//        let blur = createBlurEffectView(for: description_design_view.bounds)
-//        blur.backgroundColor = #colorLiteral(red: 0.03262747824, green: 0.07964541763, blue: 0.1254312098, alpha: 1)
-//        description_design_view.insertSubview(blur, at: 0)
         
         description_design_view.layer.borderWidth = 0.4
         description_design_view.layer.borderColor = UIColor.darkGray.cgColor
-        description_design_view.layer.cornerRadius = 10
-//        
+        description_design_view.layer.cornerRadius = 10     
         
         gradientLayer.colors = [#colorLiteral(red: 0.09628791362, green: 0.1424746215, blue: 0.1884399354, alpha: 1), UIColor.init(red: 0.1921539009, green: 0.2325905263, blue: 0.2703259587, alpha: 1).cgColor]
         gradientLayer.startPoint = CGPoint(x: 0, y: 0.5) // Top-Left

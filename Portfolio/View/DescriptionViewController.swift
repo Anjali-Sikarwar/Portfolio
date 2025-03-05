@@ -9,14 +9,15 @@ import UIKit
 import SafariServices
 
 class DescriptionViewController: UIViewController {
-
+    
+    
+    @IBOutlet weak var github_label: UILabel!
     @IBOutlet weak var projectNameLabel: UILabel!
     @IBOutlet weak var projectNameandLogoView: UIView!
     @IBOutlet weak var githubButton: UIButton!
     @IBOutlet weak var projectImage: UIImageView!
     @IBOutlet weak var projectDescription: UITextView!
     @IBOutlet weak var gitLogoImage: UIImageView!
-    
     @IBOutlet weak var screenshotCollectionView: UICollectionView!
     
     var project: Project?
@@ -34,12 +35,17 @@ class DescriptionViewController: UIViewController {
         screenshotCollectionView.delegate = self
         projectImage.layer.cornerRadius = 8
         projectNameandLogoView.layer.cornerRadius = 8
-        
-        navigationItem.title = project?.projectName ?? "Demo Project"
-        
+        github_label.layer.cornerRadius = 7
+        github_label.layer.masksToBounds = true
+
+        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Back", style: .plain, target: self, action: #selector(backButtonPressed))
         screenshotCollectionView.register(UINib(nibName: "ShowcaseScreenshotCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "ShowcaseScreenshotCollectionViewCell")
         populateData()
         githubButton.addTarget(self, action: #selector(openGitHub), for: .touchUpInside)
+    }
+    
+    @objc func backButtonPressed() {
+        navigationController?.popViewController(animated: true)
     }
     
     func populateData() {

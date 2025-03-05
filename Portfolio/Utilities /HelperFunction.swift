@@ -13,4 +13,15 @@ extension UIViewController {
         self.navigationController?.navigationBar.layer.opacity = isUserInteractionEnable ? 1 : 0
         self.navigationController?.navigationBar.isUserInteractionEnabled = isUserInteractionEnable
     }
+    func homePageNavigation() {
+        guard let navigationController = navigationController else { return }
+        for viewController in navigationController.viewControllers {
+           if let homeViewController = viewController as? HomeViewController {
+               homeViewController.hideMenu()
+               homeViewController.menu = false
+               navigationController.popToViewController(homeViewController, animated: true)
+               return
+           }
+        }
+    }
 }
