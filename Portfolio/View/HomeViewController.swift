@@ -52,12 +52,16 @@ class HomeViewController: UIViewController {
     @IBAction func githubProfileButtonPressed(_ sender: Any) {
 
         let safariVC = SFSafariViewController(url: URL(string: "https://github.com/Anjali-Sikarwar")!)
-        present(safariVC, animated: true, completion: nil)
+        present(safariVC, animated: true, completion: { [weak self] in
+            self?.homePageNavigation()
+        })
     }
     
     @IBAction func linkedInButtonPressed(_ sender: Any) {
         let safariVC = SFSafariViewController(url: URL(string: "https://www.linkedin.com/in/anjali-sikarwar-7b266a217/")!)
-        present(safariVC, animated: true, completion: nil)
+        present(safariVC, animated: true, completion: { [weak self] in
+            self?.homePageNavigation()
+        })
     }
     
     func showMenu() {
